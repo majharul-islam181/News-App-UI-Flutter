@@ -1,3 +1,5 @@
+import 'package:coaching_ui/screens/home_screen.dart';
+import 'package:coaching_ui/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class ButtomNavBar extends StatelessWidget {
@@ -21,7 +23,9 @@ class ButtomNavBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              }),
               icon: const Icon(Icons.home),
             ),
           ),
@@ -29,7 +33,9 @@ class ButtomNavBar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: IconButton(
-            onPressed: (() {}),
+            onPressed: (() {
+              Navigator.pushNamed(context, DiscoverScreen.routeName);
+            }),
             icon: const Icon(Icons.search),
           ),
           label: 'Search',
@@ -38,7 +44,7 @@ class ButtomNavBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(right: 50),
             child: IconButton(
-              onPressed: (() {}),
+              onPressed: (() => print('No profile screen yet')),
               icon: const Icon(Icons.person),
             ),
           ),
