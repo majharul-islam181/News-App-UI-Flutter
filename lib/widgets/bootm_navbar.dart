@@ -44,6 +44,7 @@ class ButtomNavBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(right: 50),
             child: IconButton(
+              // ignore: avoid_print
               onPressed: (() => print('No profile screen yet')),
               icon: const Icon(Icons.person),
             ),

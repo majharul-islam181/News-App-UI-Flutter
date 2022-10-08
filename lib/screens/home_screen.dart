@@ -1,7 +1,7 @@
 import 'package:coaching_ui/models/article_model.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/bootm_navbar.dart';
+import '../widgets/image_container.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,14 +23,12 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: const ButtomNavBar(index: 0),
-      body: ListView(children: [
-        Container(
+      extendBodyBehindAppBar: true,
+      body: ListView(padding: EdgeInsets.zero, children: [
+        ImageContainer(
           height: MediaQuery.of(context).size.height * 0.45,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(
-              image: NetworkImage(Article.articles[0].imageUrl),
-            )          ),
+          width: double.infinity,
+          imageUrl: (Article.articles[0].imageUrl),
         )
       ]),
     );
